@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+
+# PyQt5
+*.pyproj.user
+*.suo
+*.user
+*.vcxproj.user
+
+# Application build artifacts
+build/
+dist/
