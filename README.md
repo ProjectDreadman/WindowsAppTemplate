@@ -1,14 +1,13 @@
 # WindowsAppTemplate
 
-This repository serves as a template for building Windows desktop applications using Python and PyQt5. It provides a structured starting point with example code and resources, allowing developers to quickly bootstrap their projects.
+This repository serves as a template for building Windows desktop applications using Python and Tkinter. It provides a structured starting point with example code and resources, allowing developers to quickly bootstrap their projects.
 
 ## Features
 
 - **Python:** Written in Python, a versatile programming language.
-- **PyQt5:** Utilizes PyQt5 for building the graphical user interface.
-- **Example UI:** Includes a basic main window with widgets and icons.
-- **Resource Handling:** Uses Qt Resource System for managing application resources.
-- **Windows Integration:** Provides a template for creating Windows desktop applications.
+- **Tkinter:** Utilizes Tkinter for building the graphical user interface.
+- **Example UI:** Includes a basic application window with a menu and icons.
+- **Executable:** Provides a `.spec` file for building a standalone executable using PyInstaller.
 
 ## Getting Started
 
@@ -17,7 +16,8 @@ To start using this template, clone the repository and follow the setup instruct
 ### Prerequisites
 
 - Python 3.x
-- PyQt5
+- PyInstaller
+
 
 ### Installing
 
@@ -35,6 +35,10 @@ To start using this template, clone the repository and follow the setup instruct
    ```sh
    python app/main.py
    
+4. Build the executable:
+   ```sh
+   pyinstaller app/resources/app.spec
+  
 ### Contributing
 Contributions are welcome! Feel free to fork this repository, make improvements(by making issue in putting the label enhancement or in the title), and submit pull requests.
 
