@@ -1,21 +1,26 @@
-import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QLabel
-from PyQt5.QtGui import QIcon
-from PyQt5.uic import loadUi
+import tkinter as tk
+from tkinter import Menu
 
-class MainWindow(QMainWindow):
+class MainWindow(tk.Tk):
     def __init__(self):
-        super(MainWindow, self).__init__()
-        loadUi('app/ui/mainwindow.ui', self)
-        self.setWindowTitle('Windows App Template')
-        self.setWindowIcon(QIcon('app/icons/app-icon.ico'))
-        self.pushButton.clicked.connect(self.on_button_clicked)
+        super().__init__()
+        self.title("Windows App Template")
+        self.geometry("400x300")
 
-    def on_button_clicked(self):
-        self.label.setText("Button clicked!")
+        # Create a menu bar
+        self.menu_bar = Menu(self)
+        self.config(menu=self.menu_bar)
+
+        # Add a menu item
+        file_menu = Menu(self.menu_bar, tearoff=0)
+        self.menu_bar.add_cascade(label="File", menu=file_menu)
+        file_menu.add_command(label="Quit", command=self.quit)
+
+        # Add an image
+        self.icon_image = tk.PhotoImage(file="app/icons/app-icon.ico")
+        self.label = tk.Label(self, image=self.icon_image)
+        self.label.pack(pady=20)
 
 if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    main_window = MainWindow()
-    main_window.show()
-    sys.exit(app.exec_())
+    app = MainWindow()
+    app.mainloop()
