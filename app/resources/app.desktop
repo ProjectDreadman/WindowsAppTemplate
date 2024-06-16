@@ -1,6 +1,0 @@
-[Desktop Entry]
-Name=Windows App Template
-Exec=python3 /path/to/WindowsAppTemplate/app/main.py
-Icon=/path/to/WindowsAppTemplate/app/icons/app-icon.ico
-Type=Application
-Categories=Utility;
